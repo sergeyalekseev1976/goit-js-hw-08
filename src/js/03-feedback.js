@@ -11,11 +11,11 @@ const inputForm = {};
 
 function onInput(evt) {
   inputForm[evt.target.name] = evt.target.value;
-  localStorage.setItem('LOCALSTORAGE_KEY', JSON.stringify(inputForm));
+  localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(inputForm));
 }
 
 function fillForm() {
-  const parseData = JSON.parse(localStorage.getItem('LOCALSTORAGE_KEY'));
+  const parseData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
   if (parseData) {
     email.value = parseData.email;
     message.value = parseData.message;
@@ -26,6 +26,6 @@ fillForm();
 function onSubmit(evt) {
   evt.preventDefault();
   console.log(inputForm);
-  localStorage.removeItem('LOCALSTORAGE_KEY');
+  localStorage.removeItem(LOCALSTORAGE_KEY);
   evt.currentTarget.reset();
 }
