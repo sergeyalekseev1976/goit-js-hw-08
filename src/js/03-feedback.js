@@ -6,7 +6,7 @@ const message = document.querySelector('.feedback-form textarea');
 formEl.addEventListener('input', throttle(onInput, 500));
 formEl.addEventListener('submit', onSubmit);
 
-const LOCALSTORAGE_KEY = 'videoplayer-current-time';
+const LOCALSTORAGE_KEY = 'feedback-form-state';
 const inputForm = {};
 
 function onInput(evt) {
