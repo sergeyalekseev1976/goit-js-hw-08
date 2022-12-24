@@ -20,7 +20,7 @@ function fillForm() {
   if (parseData) {
     email.value = parseData.email;
     message.value = parseData.message;
-    inputForm = parseData;
+    // inputForm = parseData;
   }
 }
 fillForm();
